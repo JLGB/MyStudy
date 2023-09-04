@@ -444,44 +444,44 @@ function startDownload() {
 
     tikus = files.read("tiku")
 
-    download = threads.start(function () {
-        console.log('等待加载题库!!!');
-        let is = null;
-        try{
-            var conn = new URL(tiku_url).openConnection();
-            conn.connect();
-            is = conn.getInputStream();
-            let count = 0;
-            length = 973328;
-            let buffer = java.lang.reflect.Array.newInstance(java.lang.Byte.TYPE, 1024);
-            while (true) {
-                var p = Math.abs(Math.min(((count / length) * 100),100));
-                let numread = is.read(buffer);
-                count += numread;
-                if (numread < 0) {
-                    toast("加载完成");
-                    console.info("加载完成");
-                    downloadDialog.dismiss();
-                    downloadDialog = null;
-                    break;
-                }
-                downloadDialog.setProgress(p);
-                tikus+=java.lang.String(buffer,"UTF-8").slice(0,numread);
-            }
-            is.close();
-            file_tmp = true;
-        }catch(e){
-            console.error(e);
-            console.warn('题库加载失败');
-            question_list = null;
-            if(is){
-                is.close();
-            }
+    // download = threads.start(function () {
+    //     console.log('等待加载题库!!!');
+    //     let is = null;
+    //     try{
+    //         var conn = new URL(tiku_url).openConnection();
+    //         conn.connect();
+    //         is = conn.getInputStream();
+    //         let count = 0;
+    //         length = 973328;
+    //         let buffer = java.lang.reflect.Array.newInstance(java.lang.Byte.TYPE, 1024);
+    //         while (true) {
+    //             var p = Math.abs(Math.min(((count / length) * 100),100));
+    //             let numread = is.read(buffer);
+    //             count += numread;
+    //             if (numread < 0) {
+    //                 toast("加载完成");
+    //                 console.info("加载完成");
+    //                 downloadDialog.dismiss();
+    //                 downloadDialog = null;
+    //                 break;
+    //             }
+    //             downloadDialog.setProgress(p);
+    //             tikus+=java.lang.String(buffer,"UTF-8").slice(0,numread);
+    //         }
+    //         is.close();
+    //         file_tmp = true;
+    //     }catch(e){
+    //         console.error(e);
+    //         console.warn('题库加载失败');
+    //         question_list = null;
+    //         if(is){
+    //             is.close();
+    //         }
 
-            tikus = null;
-            exit();
-        }
-    })
+    //         tikus = null;
+    //         exit();
+    //     }
+    // })
 
 }
 

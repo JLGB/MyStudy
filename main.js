@@ -23,8 +23,9 @@ for(var i = 0; i < js_url_list.length; i++){
     try{
         let fileName = js_url.split('/').pop();
         downloadDialog.content = '正在加载脚本' + i + "/" + js_url_list.length + ".....";
-        var x = http.get(js_url).body.string();
-        files.write('/sdcard/' + fileName, x);
+        // var x = http.get(js_url).body.string();
+        // files.write('/sdcard/' + fileName, x);
+        console.log(http.get(js_url));
     }catch(e){
         console.log(e);
         console.error('脚本加载失败，已停止运行');
