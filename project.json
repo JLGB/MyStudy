@@ -1,0 +1,15 @@
+{
+    "assets": [],
+    "build": {
+      "build_id": "4B6A1D09-158",
+      "build_number": 158,
+      "build_time": 1608028692340
+    },
+    "useFeatures": [],
+    "main": "main.js",
+    "name": "好好学习",
+    "packageName": "com.bobo.xuexi",
+    "scripts": {},
+    "versionCode": 1,
+    "versionName": "2022.3.10"
+  }
