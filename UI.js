@@ -35,7 +35,7 @@ ui.layout(
                 <checkbox id="cbWenZhangGuangBo"  text="文章学习和广播收听"/>
             </horizontal>
            
-            <text margin="0 10 0 10" textSize="15sp" text="* 请给app授权 “无障碍” 权限，有时候答题出现异常，可以根据悬浮窗提示来操作"  />
+            <text margin="0 10 0 10" textSize="15sp" text="* 请给app授权 “无障碍” 权限，有时候答题出现异常，请重新app后再试"  />
 
             <text margin="0 10 0 0"  text="* 更新“学习强国APP”到最新版本， 双人/四人答题，默认都选第一题"  />
             {/* <text id="old_version_app" textColor="blue" text=" 学习强国v2.33版本"  /> */}
