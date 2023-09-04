@@ -530,8 +530,8 @@ function get_zsy() {
     // let person_2_answer_flag = CONFIG.get("2_PERSON_ANSER_CHECK", true);
     let tiao_zhan_answer_flag = CONFIG.get("TIAO_ZHAN_ANSER_CHECK", true);
     if (!ZSY) {
-        ZSY = require("zsy.js");
-        // ZSY = require("/sdcard/zsy.js");
+        // ZSY = require("zsy.js");
+        ZSY = require("/sdcard/zsy.js");
     }
     return ZSY;
 }
